@@ -45,9 +45,9 @@ h1 {
     flex-wrap: wrap;
     justify-content: space-between;
     margin: 0 0 3em;
-    min-height: 680px;
+    min-height: 440px;
     padding: 32px;
-    width: 660px;
+    width: 380px;
 }
 
 .deck .card {
@@ -59,9 +59,9 @@ h1 {
     cursor: pointer;
     display: flex;
     font-size: 0;
-    height: 125px;
+    height: 60px;
     justify-content: center;
-    width: 125px;
+    width: 60px;
 }
 
 .deck .card.open {
