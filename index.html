@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Memory</title>
+    <link rel="stylesheet prefetch" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300|Sacramento|Nunito" rel="stylesheet">
+    <link rel="stylesheet" href="css/app.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Memory Game</h1>
+        </header>
+
+        <!-- Score Section -->
+        <section class="score-panel">
+            <ul class="stars"></ul>
+
+            <span class="moves"></span>
+
+            <div class="timer">
+                <i class='fa fa-clock-o'></i>
+                <span class="time">00:00</span>
+            </div>
+
+            <div class="restart">
+                <i class="fa fa-repeat"></i>
+            </div>
+        </section>
+
+        <!-- Cards Section -->
+        <ul class="deck"></ul>
+
+    </div>
+
+    <!-- Modal Section -->
+    <div class="modalContent hide">
+        <div class="modal">
+            <div class="message"></div>
+            <button class="playAgain btn">Play Again</button>
+        </div>
+    </div>
+
+
+    <script src="js/app.js"></script>
+</body>
+</html>
