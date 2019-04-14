@@ -169,7 +169,13 @@ h1 {
 
 @media screen and (max-width:400px) {
     .deck {
-        padding: 15px;
+        padding: 25px;
+        width: 380px;
+        height: 400px;
+    }
+    .card {
+        height: 60px;
+        width:  60px;
     }
 }
 
