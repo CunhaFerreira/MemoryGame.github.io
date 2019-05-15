@@ -1,8 +1,9 @@
-# Memory Game
+# Play the [Memory Game](https://cunhaferreira.github.io/MemoryGame.github.io/)
 
 This is the fourth Project for Front-end Nanodegree at Udaticy.
 
 For more informations: [repo link](https://github.com/udacity/fend-project-memory-game)
+
 ## Project Specifications
 
 ### Game Behavior
@@ -38,3 +39,4 @@ The number of moves needed to change the rating is up to you, but it should happ
 
 ##### acknowledgments:
 Thank you [Yahya Elharony](https://youtu.be/G8J13lmApkQ) 
+ 
