@@ -2,6 +2,8 @@
 
 This is the fourth Project for Front-end Nanodegree at Udaticy.
 
+<img src="img/memory.png">
+
 For more informations: [repo link](https://github.com/udacity/fend-project-memory-game)
 
 ## Project Specifications
