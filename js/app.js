@@ -160,19 +160,20 @@ function movesCounter() {
 /*
  * Stars Based on Moviments
  */
- starsContainer.innerHTML = `<li><i class='fa fa-star'></i></li>
+starsContainer.innerHTML = `<li><i class='fa fa-star'></i></li>
  <li><i class='fa fa-star'></i></li>
  <li><i class='fa fa-star'></i></li>`;
+
 function rating() {
     switch (moves) {
         case 15:
             starsContainer.innerHTML = `<li><i class='fa fa-star'></i></li>
                                         <li><i class='fa fa-star'></i></li>`;
-        break;
+            break;
 
         case 20:
             starsContainer.innerHTML = `<li><i class='fa fa-star'></i></li>`;
-        break;
+            break;
 
     }
 
@@ -215,7 +216,7 @@ function stopTimer() {
 function gameOver() {
     if (matchedCards.length === cardsArray.length) {
         stopTimer();
-        showModal();
+        showModal() = setTimeout(300);
     }
 }
 
