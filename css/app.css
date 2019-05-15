@@ -1,4 +1,6 @@
-/* Global */
+/*
+* Global
+*/
 html {
     box-sizing: border-box;
 }
@@ -18,14 +20,25 @@ body {
 }
 
 body {
-    background: #ffffff url('/img/simp.png');
+    background: url('/img/bg.png');
     /* Background pattern from Subtle Patterns */
-    font-family: 'Nunito', cursive;
+    font-family: 'Montserrat', sans-serif;
+}
+
+:root {
+    --lightpink: #ffa4cb;
+    --darkpink: #ff62a5;
+    --yellow: #ffd478;
+    --greenlight: #42f5c5;
+    --white: #ffffff;
+    --dark: #292929;
 }
 
 h1 {
-    font-family: 'Sacramento', cursive;
+    font-family: 'Righteous', cursive;
     font-size: 50px;
+    color: var(--dark);
+    text-shadow: 2px 2px 2px var(--darkpink);
 }
 
 .container {
@@ -35,10 +48,13 @@ h1 {
     justify-content: center;
 }
 
-/* deck of cards */
+/*
+* Deck of Cards
+*/
 .deck {
     align-items: center;
-    background: linear-gradient(100deg, rgb(227, 144, 238) 0%, rgb(255, 224, 228) 100%);
+    background: var(--lightpink);
+    background: linear-gradient(0deg, var(--lightpink) 0%, var(--yellow) 100%);
     border-radius: 10px;
     box-shadow: 12px 15px 20px 0 rgba(46, 61, 73, 0.2);
     display: flex;
@@ -52,10 +68,10 @@ h1 {
 
 .deck .card {
     align-items: center;
-    background: #abd9ff;
+    background: var(--greenlight);
     border-radius: 8px;
     box-shadow: 5px 2px 20px 0 rgba(46, 61, 73, 0.35);
-    color: #ffffff;
+    color: var(--white);
     cursor: pointer;
     display: flex;
     font-size: 0;
@@ -65,7 +81,7 @@ h1 {
 }
 
 .deck .card.open {
-    background: #02b3e4;
+    background: var(--lightpink);
     cursor: default;
     transform: rotateY(0deg);
 }
@@ -76,14 +92,14 @@ h1 {
 
 .deck .card.match {
     animation: rotate-center 0.6s ease-in-out both;
-    background: #aa7ecd;
+    background: var(--darkpink);
     cursor: default;
     font-size: 2.5em;
 }
 
 .deck .card.unmatch {
     animation: shake 0.5s;
-    background: #fa7949;
+    background: #ffc852;
     cursor: default;
     font-size: 2.5em;
 }
@@ -92,8 +108,11 @@ h1 {
     pointer-events: none;
 }
 
+/*
+* Score Panel Section
+*/
 .score-panel {
-    background: linear-gradient(100deg, rgb(226, 144, 236) 0%, rgb(201, 240, 250) 100%);
+    background: var(--yellow);
     border-radius: 10px;
     margin-bottom: 10px;
     text-align: center;
@@ -124,23 +143,27 @@ h1 {
     padding: 10px;
 }
 
+/*
+* Modal Section
+*/
 .modal {
-    background: #ffffff;
-    border: 3px solid #02b3e4;
-    font-family: 'Nunito', cursive;
+    background: #42f5c58e;
+    border-radius: 10px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bolder;
     height: auto;
     margin: auto;
     padding: 10px;
     position: absolute;
     text-align: center;
-    top: 80%;
+    top: 70%;
     transform: translate(50%, -50%);
     width: 50%;
-    z-Index: 4;
+    z-Index: 1;
 }
 
 .btn {
-    background-color: #e290ec;
+    background-color: var(--darkpink);
     border-radius: 10px;
     border: 0;
     margin: 10px;
@@ -151,34 +174,88 @@ h1 {
     display: none;
 }
 
-
-@media screen and (max-width: 650px) {
-    ul.deck {
-        height: auto;
-        margin: 0 10px 10px 0;
-        max-width: 85%;
-    }
-
-    .card {
-        margin-top: 20px;
-    }
-    .score-panel {
-        max-width: 75%;
-    }
+/*
+* Footer Section
+*/
+footer {
+    background: var(--lightpink);
+    padding: .5%;
+    align-content: center;
 }
 
-@media screen and (max-width:400px) {
+p {
+    text-align: center;
+    font-weight: bold;
+    color: var(--white);
+}
+
+.social-icons {
+    text-align: center;
+}
+
+.fab {
+    color: var(--dark);
+    text-shadow: 2px 2px 2px var(--darkpink);
+    font-size: 1.5rem;
+    padding: .6%;
+}
+
+.fab:hover {
+    color: var(--white);
+}
+
+
+/*
+* Breakpoints Section
+*/
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2rem;
+    }
+
     .deck {
-        padding: 25px;
-        width: 380px;
-        height: 400px;
+        width: auto;
     }
+
+    .deck .card {
+        height: 100px;
+        width: 100px;
+    }
+
     .card {
-        height: 60px;
-        width:  60px;
+        margin: 1%;
+    }
+
+    .score-panel {
+        width: auto;
+        padding: 2%;
     }
 }
 
+@media (max-width: 487px) {
+
+    .deck .card {
+        height: 65px;
+        width: 65px;
+    }
+
+    #deck {
+        padding: 28px;
+        min-height: inherit;
+    }
+}
+
+@media (max-width: 339px) {
+    .deck .card {
+        height: 50px;
+        width: 50px;
+    }
+
+}
+
+/*
+* Animation's Card Section
+*/
 
 /* https://www.w3schools.com/howto/howto_css_shake_image.asp */
 @keyframes shake {
@@ -246,25 +323,3 @@ h1 {
         transform: rotate(360deg);
     }
 }
-
-
-/* Media screen for deck and cards */
-@media screen and (max-width: 650px){
-    ul.deck{
-      max-width: 85%;
-      height: auto;
-      margin: 0 10px 10px 0;
-    }
-     .card {
-       margin-top: 20px;
-     }
-  }
-  .score-panel {
-    max-width: 75%;
-  }
-
-  @media screen and (max-width:400px){
-      .deck {
-          padding: 15px;
-      }
-  }
