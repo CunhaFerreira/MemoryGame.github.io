@@ -1,4 +1,4 @@
-# Play the [Memory Game](https://cunhaferreira.github.io/MemoryGame.github.io/)
+# Play the [Memory Game](https://cunhapaola.github.io/MemoryGame.github.io/)
 
 This is the fourth Project for Front-end Nanodegree at Udaticy.
 
